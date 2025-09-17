@@ -9,11 +9,11 @@
             "environment": [],
             "environmentFiles": [],
             "essential": true,
-            "image": "portfolio:latest",
+            "image": "portfolio1:latest",
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/task-for-portfolio",
+                    "awslogs-group": "/ecs/task-for-portfolio1",
                     "awslogs-create-group": "true",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
@@ -21,13 +21,13 @@
                 "secretOptions": []
             },
             "mountPoints": [],
-            "name": "portfolio",
+            "name": "portfolio1",
             "portMappings": [
                 {
                     "appProtocol": "http",
                     "containerPort": 3000,
                     "hostPort": 3000,
-                    "name": "portfolio-3000-tcp",
+                    "name": "portfolio1-3000-tcp",
                     "protocol": "tcp"
                 }
             ],
@@ -37,13 +37,14 @@
         }
     ],
     "cpu": "1024",
-    "executionRoleArn": "arn:aws:iam::379402500969:role/LabRole",
-    "family": "task-for-portfolio",
+    "enableFaultInjection": false,
+    "executionRoleArn": "arn:aws:iam::381492094459:role/LabRole",
+    "family": "task-for-portfolio1",
     "memory": "3072",
     "networkMode": "awsvpc",
     "placementConstraints": [],
-    "registeredAt": "2025-09-05T20:38:35.064Z",
-    "registeredBy": "arn:aws:sts::379402500969:assumed-role/voclabs/user4337284=Test_Student",
+    "registeredAt": "2025-09-17T20:49:48.648Z",
+    "registeredBy": "arn:aws:sts::381492094459:assumed-role/voclabs/user3792142=Daksh_Patel",
     "requiresAttributes": [
         {
             "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
@@ -76,8 +77,8 @@
         "operatingSystemFamily": "LINUX"
     },
     "status": "ACTIVE",
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:379402500969:task-definition/task-for-portfolio:1",
-    "taskRoleArn": "arn:aws:iam::379402500969:role/LabRole",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:381492094459:task-definition/task-for-portfolio1:1",
+    "taskRoleArn": "arn:aws:iam::381492094459:role/LabRole",
     "volumes": [],
     "tags": []
 }
